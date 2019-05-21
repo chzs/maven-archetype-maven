@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<archetype-descriptor name="maven-archetype-sept">
+    <fileSets>
+        <!--
+            fileSet 定义项目生成后的初始代码 项目生成后会将本项目**/.java代码复制到生成项目package/src/main/java/**.java下
+            filtered true:将需要复制的代码处理，如参数的赋值
+            packaged true:将本项目代码放到生成项目中
+        -->
+        <fileSet filtered="true" packaged="true">
+            <directory>src/main/java</directory>
+            <includes>
+                <include>**/*.java</include>
+            </includes>
+        </fileSet>
+        <fileSet>
+            <directory>src/test/java</directory>
+            <includes>
+                <include>**/*.java</include>
+            </includes>
+        </fileSet>
+        <fileSet filtered="true" packaged="false">
+            <directory>src/main/resources</directory>
+            <includes>
+                <include>**/*.properties</include>
+            </includes>
+        </fileSet>
+    </fileSets>
+    <requiredProperties>
+        <requiredProperty key="groupId">
+            <defaultValue>tk.septus</defaultValue>
+        </requiredProperty>
+    </requiredProperties>
+</archetype-descriptor>
