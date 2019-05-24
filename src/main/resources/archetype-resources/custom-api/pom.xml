@@ -10,10 +10,9 @@
         <version>${version}</version>
     </parent>
 
-    <artifactId>${artifactId}-api</artifactId>
-    <version>${api.version}</version>
-    <name>${artifactId}-api</name>
-    <packaging>jar</packaging>
+    <artifactId>${artifactId}-custom-api</artifactId>
+    <version>${custom.api.version}</version>
+    <name>${artifactId}-custom-api</name>
 
     <url>http://maven.apache.org</url>
 

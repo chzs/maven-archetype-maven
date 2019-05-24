@@ -1,5 +1,137 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <archetype-descriptor name="maven-archetype-sept">
+
+    <modules>
+        <module dir="web">
+            <!-- fileSet 定义项目生成后的初始代码 项目生成后会将本项目**/.java代码复制到生成项目package/src/main/java/**.java下-->
+            <!-- filtered true:将需要复制的代码处理，如参数的赋值-->
+            <!-- packaged true:将本项目代码放到生成项目中-->
+            <fileSets>
+                <fileSet filtered="true" packaged="true" encoding="UTF-8">
+                    <directory>src/main/java</directory>
+                    <includes>
+                        <include>**/*.java</include>
+                    </includes>
+                </fileSet>
+                <fileSet filtered="true" packaged="true" encoding="UTF-8">
+                    <directory>src/test/java</directory>
+                    <includes>
+                        <include>**/*.java</include>
+                    </includes>
+                </fileSet>
+                <fileSet filtered="true" encoding="UTF-8">
+                    <directory>src/main/webapp</directory>
+                    <includes>
+                        <include>**/*.xml</include>
+                        <include>**/*.html</include>
+                    </includes>
+                </fileSet>
+
+                <fileSet filtered="true" encoding="UTF-8">
+                    <directory>config/user</directory>
+                    <includes>
+                        <include>**/*.xml</include>
+                    </includes>
+                </fileSet>
+                <fileSet filtered="true" encoding="UTF-8">
+                    <directory>config</directory>
+                    <includes>
+                        <include>**/*.xml</include>
+                    </includes>
+                </fileSet>
+                <fileSet filtered="true" encoding="UTF-8">
+                    <directory>config/system</directory>
+                    <includes>
+                        <include>**/*.xml</include>
+                        <include>**/*.properties</include>
+                    </includes>
+                </fileSet>
+
+
+                <fileSet encoding="UTF-8">
+                    <directory>script</directory>
+                    <includes>
+                        <include>**/*.pro</include>
+                        <include>**/*.sh</include>
+                    </includes>
+                </fileSet>
+                <fileSet filtered="true" encoding="UTF-8">
+                    <directory></directory>
+                    <includes>
+                        <include>pom.xml</include>
+                    </includes>
+                </fileSet>
+            </fileSets>
+        </module>
+
+        <module dir="api">
+            <fileSets>
+                <fileSet filtered="true" encoding="UTF-8" packaged="true">
+                    <directory>src/main/java</directory>
+                </fileSet>
+            </fileSets>
+            <fileSets>
+                <fileSet filtered="true" encoding="UTF-8">
+                    <directory></directory>
+                    <includes>
+                        <include>pom.xml</include>
+                    </includes>
+                </fileSet>
+            </fileSets>
+        </module>
+
+        <module dir="core">
+            <fileSets>
+                <fileSet filtered="true" encoding="UTF-8" packaged="true">
+                    <directory>src/main/java</directory>
+                </fileSet>
+            </fileSets>
+            <fileSets>
+                <fileSet filtered="true" encoding="UTF-8">
+                    <directory></directory>
+                    <includes>
+                        <include>pom.xml</include>
+                    </includes>
+                </fileSet>
+            </fileSets>
+        </module>
+
+        <module dir="common">
+            <fileSets>
+                <fileSet filtered="true" encoding="UTF-8" packaged="true">
+                    <directory>src/main/java</directory>
+                </fileSet>
+            </fileSets>
+            <fileSets>
+                <fileSet filtered="true" encoding="UTF-8">
+                    <directory></directory>
+                    <includes>
+                        <include>pom.xml</include>
+                    </includes>
+                </fileSet>
+            </fileSets>
+        </module>
+
+        <module dir="custom-api">
+            <fileSets>
+                <fileSet filtered="true" encoding="UTF-8" packaged="true">
+                    <directory>src/main/java</directory>
+                </fileSet>
+            </fileSets>
+            <fileSets>
+                <fileSet filtered="true" encoding="UTF-8">
+                    <directory></directory>
+                    <includes>
+                        <include>pom.xml</include>
+                    </includes>
+                </fileSet>
+            </fileSets>
+        </module>
+    </modules>
+
+
+
+
     <fileSets>
         <!--
             fileSet 定义项目生成后的初始代码 项目生成后会将本项目**/.java代码复制到生成项目package/src/main/java/**.java下
@@ -34,8 +166,11 @@
         <requiredProperty key="package">
             <defaultValue>tk.septus</defaultValue>
         </requiredProperty>
-        <requiredProperty key="springVersion">
+        <requiredProperty key="spring.version">
             <defaultValue>5.1.7.RELEASE</defaultValue>
+        </requiredProperty>
+        <requiredProperty key="java.version">
+            <defaultValue>1.8</defaultValue>
         </requiredProperty>
     </requiredProperties>
 
