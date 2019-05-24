@@ -1,4 +1,3 @@
-<!-- 变量声明 -->
 #set( $symbol_pound = '#' )
 #set( $symbol_dollar = '$' )
 #set( $symbol_escape = '\' )
@@ -11,8 +10,9 @@
     <groupId>${groupId}</groupId>
     <artifactId>${artifactId}</artifactId>
     <version>${version}</version>
-    <name>${artifactId}</name>
     <packaging>pom</packaging>
+
+    <name>${artifactId}</name>
 
     <url>www.maven.org</url>
 
@@ -21,11 +21,11 @@
         <api.version>1.0-SNAPSHOT</api.version>
         <custom.api.version>1.0-SNAPSHOT</custom.api.version>
         <project.version>1.0-SNAPSHOT</project.version>
-        <java.version>${java.version}</java.version>
+        <java.version>${javaVersion}</java.version>
         <timestamp>${symbol_dollar}{maven.build.timestamp</timestamp>
         <project.encoding>utf-8</project.encoding>
         <maven.build.timestamp.format>yyyyMMddHHmm</maven.build.timestamp.format>
-        <spring.version>${spring.version}</spring.version>
+        <spring.version>${springVersion}</spring.version>
     </properties>
 
 

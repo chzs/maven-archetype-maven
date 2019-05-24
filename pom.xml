@@ -7,8 +7,32 @@
     <groupId>tk.septus</groupId>
     <artifactId>maven-archetype-sept</artifactId>
     <version>1.0-SNAPSHOT</version>
-    <!-- 下面的打包方式用jar也可以 -->
+
+
+
+
+    <!--下面的打包方式用jar也可以-->
     <packaging>maven-archetype</packaging>
+    <build>
+        <extensions>
+            <extension>
+                <groupId>org.apache.maven.archetype</groupId>
+                <artifactId>archetype-packaging</artifactId>
+                <version>3.1.0</version>
+            </extension>
+        </extensions>
+        <pluginManagement>
+            <plugins>
+                <plugin>
+                    <artifactId>maven-archetype-plugin</artifactId>
+                    <version>3.1.0</version>
+                </plugin>
+            </plugins>
+        </pluginManagement>
+    </build>
+
+
+<!--    <packaging>jar</packaging>-->
 
 
 </project>
