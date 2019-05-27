@@ -17,5 +17,12 @@
 
     <url>http://maven.apache.org</url>
 
-
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>tk.septus</groupId>
+                <artifactId>${artifactId}-common</artifactId>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
 </project>
