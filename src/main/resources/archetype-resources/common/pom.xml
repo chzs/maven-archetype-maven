@@ -6,13 +6,13 @@
 
     <parent>
         <groupId>${groupId}</groupId>
-        <artifactId>${artifactId}</artifactId>
+        <artifactId>${parentArtifactId}</artifactId>
         <version>${version}</version>
     </parent>
 
-    <artifactId>${artifactId}-common</artifactId>
+    <artifactId>common</artifactId>
     <version>${project.version}</version>
-    <name>${artifactId}-common</name>
+    <name>common</name>
 
     <url>http://maven.apache.org</url>
 

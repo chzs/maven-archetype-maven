@@ -6,13 +6,13 @@
 
     <parent>
         <groupId>${groupId}</groupId>
-        <artifactId>${artifactId}</artifactId>
+        <artifactId>${parentArtifactId}</artifactId>
         <version>${version}</version>
     </parent>
 
-    <artifactId>${artifactId}-api</artifactId>
+    <artifactId>api</artifactId>
     <version>${api.version}</version>
-    <name>${artifactId}-api</name>
+    <name>api</name>
     <packaging>jar</packaging>
 
     <url>http://maven.apache.org</url>
@@ -21,7 +21,7 @@
         <dependencies>
             <dependency>
                 <groupId>tk.septus</groupId>
-                <artifactId>${artifactId}-common</artifactId>
+                <artifactId>common</artifactId>
             </dependency>
         </dependencies>
     </dependencyManagement>

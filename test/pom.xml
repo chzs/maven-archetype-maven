@@ -1,30 +1,28 @@
-#set( $symbol_pound = '#' )
-#set( $symbol_dollar = '$' )
-#set( $symbol_escape = '\' )
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0"
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0
-         http://maven.apache.org/xsd/maven-4.0.0.xsd">
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>${groupId}</groupId>
-    <artifactId>${artifactId}</artifactId>
-    <version>${version}</version>
+    <groupId>tk.septus</groupId>
+    <artifactId>test</artifactId>
+    <version>1.0-SNAPSHOT</version>
     <packaging>pom</packaging>
 
-    <name>${artifactId}</name>
+    <name>test</name>
 
     <url>www.maven.org</url>
 
     <properties>
-        <app.name>${artifactId}</app.name>
+        <app.name>test</app.name>
         <api.version>1.0-SNAPSHOT</api.version>
         <custom.api.version>1.0-SNAPSHOT</custom.api.version>
         <project.version>1.0-SNAPSHOT</project.version>
+        <java.version>1.8</java.version>
+        <timestamp>${maven.build.timestamp</timestamp>
         <project.encoding>utf-8</project.encoding>
-        <java.version>${javaVersion}</java.version>
-        <spring.version>${springVersion}</spring.version>
+        <maven.build.timestamp.format>yyyyMMddHHmm</maven.build.timestamp.format>
+        <spring.version>5.1.7.RELEASE</spring.version>
     </properties>
 
 
@@ -84,4 +82,13 @@
 
         </dependencies>
     </dependencyManagement>
+
+
+    <modules>
+        <module>test-web</module>
+        <module>test-api</module>
+        <module>test-custom-api</module>
+        <module>test-core</module>
+        <module>test-commmon</module>
+    </modules>
 </project>

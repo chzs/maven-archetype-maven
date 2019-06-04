@@ -6,13 +6,13 @@
 
     <parent>
         <groupId>${groupId}</groupId>
-        <artifactId>${artifactId}</artifactId>
+        <artifactId>${parentArtifactId}</artifactId>
         <version>${version}</version>
     </parent>
 
-    <artifactId>${artifactId}-web</artifactId>
-    <version>${project.version}</version>
-    <name>${artifactId}-web</name>
+    <artifactId>web</artifactId>
+    <version>1.0-SNAPSHOT</version>
+    <name>web</name>
     <packaging>war</packaging>
 
     <url>http://maven.apache.org</url>
@@ -20,7 +20,7 @@
     <dependencies>
         <dependency>
             <groupId>tk.septus</groupId>
-            <artifactId>${artifactId}-custom-api</artifactId>
+            <artifactId>custom-api</artifactId>
             <version>${custom.api.version}</version>
         </dependency>
 

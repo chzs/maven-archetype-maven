@@ -1,18 +1,24 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <archetype-descriptor xmlns="https://maven.apache.org/plugins/maven-archetype-plugin/archetype-descriptor/1.1.0"
                       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-                      xsi:schemaLocation="
-                        https://maven.apache.org/plugins/maven-archetype-plugin/archetype-descriptor/1.1.0
-                        http://maven.apache.org/xsd/archetype-descriptor-1.1.0.xsd"
-                      name="maven-archetype-sept">
+                      xsi:schemaLocation="https://maven.apache.org/plugins/maven-archetype-plugin/archetype-descriptor/1.1.0
+                      http://maven.apache.org/xsd/archetype-descriptor-1.1.0.xsd"
+                      name="maven-archetype-sept-demo" partial="false">
+<!-- name选择archetype时展示的名字 partial这个archetype是否是整个项目（感觉没有用） -->
 
 
     <requiredProperties>
         <requiredProperty key="groupId">
             <defaultValue>tk.septus</defaultValue>
         </requiredProperty>
+        <requiredProperty key="artifactId">
+            <defaultValue>demo</defaultValue>
+        </requiredProperty>
         <requiredProperty key="package">
             <defaultValue>tk.septus</defaultValue>
+        </requiredProperty>
+        <requiredProperty key="parentArtifactId">
+            <defaultValue>demo</defaultValue>
         </requiredProperty>
         <requiredProperty key="springVersion">
             <defaultValue>5.1.7.RELEASE</defaultValue>
@@ -77,7 +83,7 @@
                         <include>**/*.sh</include>
                     </includes>
                 </fileSet>
-                <fileSet filtered="true" encoding="UTF-8">
+                <fileSet filtered="true" packaged="true" encoding="UTF-8">
                     <directory></directory>
                     <includes>
                         <include>pom.xml</include>
@@ -91,6 +97,12 @@
                 <fileSet filtered="true" encoding="UTF-8" packaged="true">
                     <directory>src/main/java</directory>
                 </fileSet>
+                <fileSet>
+                    <directory></directory>
+                    <includes>
+                        <include>pom.xml</include>
+                    </includes>
+                </fileSet>
             </fileSets>
         </module>
 
@@ -99,6 +111,12 @@
                 <fileSet filtered="true" encoding="UTF-8" packaged="true">
                     <directory>src/main/java</directory>
                 </fileSet>
+                <fileSet>
+                    <directory></directory>
+                    <includes>
+                        <include>pom.xml</include>
+                    </includes>
+                </fileSet>
             </fileSets>
         </module>
 
@@ -106,6 +124,12 @@
             <fileSets>
                 <fileSet filtered="true" encoding="UTF-8" packaged="true">
                     <directory>src/main/java</directory>
+                </fileSet>
+                <fileSet>
+                    <directory></directory>
+                    <includes>
+                        <include>pom.xml</include>
+                    </includes>
                 </fileSet>
             </fileSets>
 
@@ -116,39 +140,14 @@
                 <fileSet filtered="true" encoding="UTF-8" packaged="true">
                     <directory>src/main/java</directory>
                 </fileSet>
+                <fileSet>
+                    <directory></directory>
+                    <includes>
+                        <include>pom.xml</include>
+                    </includes>
+                </fileSet>
             </fileSets>
         </module>
     </modules>
-
-
-
-
-<!--    <fileSets>-->
-<!--        &lt;!&ndash;-->
-<!--            fileSet 定义项目生成后的初始代码 项目生成后会将本项目**/.java代码复制到生成项目package/src/main/java/**.java下-->
-<!--            filtered true:将需要复制的代码处理，如参数的赋值-->
-<!--            packaged true:将本项目代码放到生成项目中-->
-<!--        &ndash;&gt;-->
-<!--        <fileSet filtered="true" packaged="true">-->
-<!--            <directory>src/main/java</directory>-->
-<!--            <includes>-->
-<!--                <include>**/*.java</include>-->
-<!--            </includes>-->
-<!--        </fileSet>-->
-<!--        <fileSet>-->
-<!--            <directory>src/test/java</directory>-->
-<!--            <includes>-->
-<!--                <include>**/*.java</include>-->
-<!--            </includes>-->
-<!--        </fileSet>-->
-<!--        <fileSet filtered="true" packaged="false">-->
-<!--            <directory>src/main/resources</directory>-->
-<!--            <includes>-->
-<!--                <include>**/*.properties</include>-->
-<!--            </includes>-->
-<!--        </fileSet>-->
-<!--    </fileSets>-->
-
-
 
 </archetype-descriptor>
